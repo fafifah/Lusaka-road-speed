@@ -54,10 +54,18 @@ const defaultVar = "speed_AM_kmh";
 
 const map = L.map('map').setView([-15.420790734490932, 28.305490351021028], 12);
 
+// L.tileLayer(
+//     'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+//     {
+//         attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+//     }
+// ).addTo(map);
+
 L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
-        attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
     }
 ).addTo(map);
 
